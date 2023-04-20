@@ -26,5 +26,5 @@ def lambda_handler(event, context):
 
     return {
         'statusCode': response.getcode(),
-        'body': json.read(response).decode('utf-8')
+        'body': response.read().decode('utf-8')
     }
