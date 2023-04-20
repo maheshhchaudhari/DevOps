@@ -6,9 +6,7 @@ resource "aws_subnet" "private_subnet" {
     vpc_id     = data.aws_vpc.vpc.id
     cidr_block = "10.0.21.0/24"
     map_public_ip_on_launch = false
-     
-
-
+    
   tags = {
     Name = "private_subnet"
   }
@@ -36,7 +34,6 @@ resource "aws_route_table_association" "a" {
   subnet_id      = aws_subnet.private_subnet.id
   route_table_id = aws_route_table.route_table.id
 }
-# Lambda Function
 
 #Security Group
 
@@ -52,7 +49,7 @@ resource "aws_security_group" "default" {
           from_port = "0"
           to_port   = "0"
           protocol  = "-1"
-          self      = "true"
+          cidr_blocks = ["0.0.0.0/0"]
     }
 
     tags = {
