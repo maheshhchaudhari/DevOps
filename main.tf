@@ -76,7 +76,7 @@ resource "aws_lambda_function" "test_lambda" {
   role          = data.aws_iam_role.lambda.arn
   handler       = "lambda.lambda_handler" #[Refernece Python sciptname.function]
 
-  source_code_hash = data.archive_file.lambda.output_base64sha256
+  source_code_hash = data.archive_file.Maheshlambda.output_base64sha256
 
   runtime = "python3.8"
    vpc_config {
