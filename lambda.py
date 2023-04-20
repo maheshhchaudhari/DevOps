@@ -3,7 +3,7 @@ import os
 import urllib.request
 
 def lambda_handler(event, context):
-    print("Hello from Lambda!")
+    #print("Hello from Lambda!")
     #Implement code here - Mahesh
     #Security Headers here 
     headers = {
