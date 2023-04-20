@@ -20,7 +20,7 @@ resource "aws_subnet" "private_subnet" {
 resource "aws_route_table" "route_table" {
   vpc_id = data.aws_vpc.vpc.id
 
-    route = {
+    route {
       
       cidr_block = "0.0.0.0/0"
       
