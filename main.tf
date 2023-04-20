@@ -48,14 +48,7 @@ resource "aws_security_group" "default" {
         data.aws_vpc.vpc
     ]
 
-        ingress {
-          from_port = "0"
-          to_port   = "0"
-          protocol  = "-1"
-          self      = true
-    }
-
-        egress {
+       egress {
           from_port = "0"
           to_port   = "0"
           protocol  = "-1"
